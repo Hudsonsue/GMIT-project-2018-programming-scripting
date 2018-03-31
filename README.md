@@ -9,5 +9,5 @@ Bouquet *Flowers by Kay Galway*, Photograph  *Yann Studios, Galway*
 
 ![iris](iris.jpg)
 
-##Purpose
+## Purpose
 The purpose of this repository is to contain the dataset, scripts and notes relating to the project 
