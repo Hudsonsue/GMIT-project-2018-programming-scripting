@@ -3,5 +3,5 @@ Project 2018 for crn 52167 Programming &amp; Scripting. Student **G00219132 SHUD
 
 The project centres around the Fisher's Iris dateset
 
-[iris](iris2.jpeg)
+![iris](iris.jpeg)
 
