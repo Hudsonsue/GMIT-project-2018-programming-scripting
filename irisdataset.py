@@ -40,6 +40,7 @@ summary = data.groupby(4)[0].describe()
 #temp.to_csv('out.csv')
 #
 print (summary)
+summary.to_csv('summary.csv')
 
 
 
