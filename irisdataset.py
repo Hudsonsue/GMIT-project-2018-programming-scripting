@@ -5,6 +5,7 @@
 
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 import csv
 data = pd.read_csv("iris.csv", header=-1) 
 #set header =-1 as data in row 0
@@ -30,5 +31,10 @@ print("minimum sepal length per speices" , data.groupby (4) [0].min())
 print("maximum sepal length per speices" , data.groupby (4) [0].max())
 
 print("mean sepal length per speices" , data.groupby (4) [0].mean())
+
+
+#plt(data.groupby (4) [0].min())
+
+print (data[4].value_counts())
 
 
