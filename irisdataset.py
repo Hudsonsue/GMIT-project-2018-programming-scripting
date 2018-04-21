@@ -19,10 +19,10 @@ print (np.min(A[:,0]))
 print (np.max(A[:,0]))
 print (np.sum(A[:,0]))
 print (avg_col)
+print ('mean', np.mean(A[:,0]))
 
 print (np.min(A[:,1]))
 print (np.max(A[:,1]))
-
 data.groupby(4)[0].min()
 #
 print("minimum sepal length per species" , data.groupby (4) [0].min())
@@ -30,6 +30,7 @@ print("minimum sepal length per species" , data.groupby (4) [0].min())
 print("maximum sepal length per species" , data.groupby (4) [0].max())
 
 print("mean sepal length per species" , data.groupby (4) [0].mean())
+
 
 
 #plt(data.groupby (4) [0].min())
@@ -42,6 +43,9 @@ summary = data.groupby(4)[0].describe()
 print (summary)
 summary.to_csv('summary.csv')
 
+x, y =[A[:,0],A[:,1]] 
+plt.scatter(x, y)
+plt.show ()
 
 
 
