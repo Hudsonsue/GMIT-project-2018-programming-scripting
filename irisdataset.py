@@ -7,10 +7,13 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import csv
+import sys
+sys.stdout=open ('generalstats.txt','a')
 plt.style.use('seaborn-whitegrid')
 
+
 data = pd.read_csv("iris.csv", header=-1) 
-#set header =-1 as data in row 0
+#scdet header =-1 as data in row 0
 A = np.array (data)
 
 sum_col = (np.sum(A[:,0]))
