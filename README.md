@@ -14,12 +14,12 @@ Bouquet *Flowers by Kay Galway*, Photograph  *Yann Studios, Galway*
 ![iris](iris.jpg)
 
 # Project Brief
-Project brief and notes,
+Project brief and notes![project brief](project brief)
 
 ## Personal Goals 
 Much of my day to day work involves data, whilst reasonably proficient in database interrogation and in the use of excel I am not always sure how to analyse and display different data in a MEANINGFUL way. I am hoping that what I learn during this module/project can be used and expanded upon in my daily work. 
 
-## Compilation
-python was used for all programming tasks in this programme. 
+## Code language ##
+All coding is [Python 3.6.5](https://www.python.org/)
 
 
