@@ -14,7 +14,7 @@ Bouquet *Flowers by Kay Galway*, Photograph  *Yann Studios, Galway*
 ![iris](iris.jpg)
 
 # Project Brief
-Project brief and notes ![project brief.pdf](project brief)
+Project brief and notes [project brief](https://github.com/Hudsonsue/GMIT-project-2018-programming-scripting/blob/master/project%20brief.pdf)
 
 ## Personal Goals 
 Much of my day to day work involves data, whilst reasonably proficient in database interrogation and in the use of excel I am not always sure how to analyse and display different data in a MEANINGFUL way. I am hoping that what I learn during this module/project can be used and expanded upon in my daily work. 
