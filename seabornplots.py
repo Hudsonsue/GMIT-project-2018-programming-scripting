@@ -18,6 +18,7 @@ print(df)
 
 # use the function regplot to make a scatterplot
 sns.regplot(x=df["sepal_length"], y=df["sepal_width"])
+plt.legend()
 plt.show()
 
  
