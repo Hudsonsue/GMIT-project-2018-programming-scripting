@@ -8,32 +8,35 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import csv
 import sys
-sys.stdout=open ('generalstats.txt','a')
+
+## below allows anyone running script to decide whether to save the print output to file or display in terminal
+
+
+while True:
+    response = input("Display or save to file? D or S > ")
+    if response == "S": 
+        sys.stdout=open ('generalstats.txt','w') # redirected to file
+        break###turns off interactieve display
+    elif response == "D":break    
+
 plt.style.use('seaborn-whitegrid')
 
-
-data = pd.read_csv("iris.csv", header=-1) 
-#scdet header =-1 as data in row 0
-A = np.array (data)
+data = pd.read_csv("iris.csv", header=-1) ## reading in data using pandas
+# note I set header =-1 as data in row 0
+A = np.array (data) # created a NumpPy array of the dataset
 
 sum_col = (np.sum(A[:,0]))
 avg_col = sum_col/150
 
-print (data)
+print (data)  # printed the dataset 
 
-#f = open('generalstats.txt','w')
+## used print statements to create empty lines, single, double and multiples
 
 print('\n'*2)
 
-n =  (np.min(A[:,0]))
-print ('test',n)
-##f.write str(n)
-##f.close()
+## below are some basic stats for all species
 print ("Minimum Sepal length all species is",np.min(A[:,0]),"cm")
-#print('\n')
 print ("Maximum Sepal length all species is",np.max(A[:,0]),"cm")
-##print (np.sum(A[:,0]))
-##print (avg_col)
 print ("Mean Sepal length all species is", np.mean(A[:,0]),"cm")
 print()
 print ("Minimum Sepal width all species is",np.min(A[:,1]),"cm")
@@ -48,7 +51,9 @@ print ("Minimum Petal width all species is",np.min(A[:,3]),"cm")
 print ("Maximum Petal width all species is",np.max(A[:,3]),"cm")
 print ('Mean Petal width all species is', np.mean(A[:,3]),"cm")
 
-data.groupby(4)[0].min()
+# below produces basic stats, this time grouped by species
+#data.groupby(4)[0].min()
+print ('Statistics Grouped by Species')
 
 print('\n')
 print("Minimum sepal length per species" , data.groupby (4) [0].min())
@@ -78,7 +83,7 @@ summary.to_csv('summary.csv')
 
 # Below uses  matplotlib.pyplot to produce and save scatter graphs
 
-   
+  
 ## plt.ioff()
 
 # Sepal characteristics
