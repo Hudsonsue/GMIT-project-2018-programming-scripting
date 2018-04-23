@@ -35,8 +35,16 @@ When researching courses this course (https://www.gmit.ie/computing/higher-diplo
 * Changed way of learning – in past study life all contact was in a classroom/lab environment and the online environment has its challenges as it was easy to get bogged down on small problems which in a classroom environment would have been solved quickly by consulting with peers/academics. I found the concept of discussion boards and google slightly alien and potentially overwhelming. 
 * Day to day life and work responsibilities interrupted a few times and I found myself unable to engage in both modules simultaneously, after some initial panic I decided to divert my time fully to whichever of the modules needed it most until these external factors calmed down. 
 
-
 ## Code language ##
 All coding is [Python 3.6.5](https://www.python.org/)
 
+
+# Fishers Dataset – who & why ?#
+Sir Ronald Fisher (1890-1962) was a British geneticist and statistician. He was schooled in [Harrow Public School] (https://www.harrowschool.org.uk/) and studied Astronomy at [Cambridge University] (https://www.cam.ac.uk/).
+It was in his 1936 paper *The use of multiple measurements in taxonomic problems* that theIris Dataset was introduced. The dataset is a set of measurements (cm) of both Petal and Sepal length and width across three species of Iris. There are 50 measurements for each of species, *Iris setosa*, *Iris virginica* and *Iris versicolor*.
+The data was used by Fisher to develop a linear discriminant model to distinguish species from each other. 
+The Dataset is used as a dataset for testing purposes in computer science, it is used also to explore data mining. 
+Whilst researching the dataset and use thereof I came across a [techopedia definition](https://www.techopedia.com/definition/32880/iris-flower-data-set) which I felt summed it up nicely.
+
+One might question why such an innocuous group of measurements is so widely used and during my research I found the following which I felt was a great explanation for a novice to the area of data analytics such as myself. [stack exchange article](https://stats.stackexchange.com/questions/74776/what-aspects-of-the-iris-data-set-make-it-so-successful-as-an-example-teaching)
 
