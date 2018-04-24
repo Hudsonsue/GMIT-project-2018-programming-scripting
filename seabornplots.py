@@ -9,22 +9,46 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-plt.style.use('seaborn-whitegrid')
-
-# import dataset
+# import dataset from seaborn
 df = sns.load_dataset('iris')
 
-print(df)
+print(df) #printing the data
 
-# use the function regplot to make a scatterplot
-sns.regplot(x=df["sepal_length"], y=df["sepal_width"])
-plt.legend()
-plt.show()
 
  
-# Use the 'hue' argument to provide a factor variable
-sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg=False, hue='species', legend=False)
+# Use 'hue' to change colours by species
+sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg= False, hue='species', legend=False)
+# Move the legend to an empty part of the plot
+plt.legend(loc='lower right')
+plt.xlabel('Sepal Length', fontsize = 10)
+plt.ylabel("Sepal Width", fontsize = 10)
+plt.title("Iris Datset: Sepal Charateristics")
+plt.tight_layout
+plt.show()
+
+sns.lmplot( x="petal_length", y="petal_width", data=df, fit_reg=False, hue='species', legend=False)
+plt.title("Iris Datset: Petal Charateristics")
+plt.xlabel('Petal Length', fontsize = 10)
+plt.ylabel("Petal Width", fontsize = 10)
 # Move the legend to an empty part of the plot
 plt.legend(loc='lower right')
 plt.show()
+
+# Histogram of petal /sepal length
+# Set default Seaborn style
+sns.set()
+# Plot histogram of petal lengths
+plt.hist(df["petal_length"], bins=150 )
+#plt.hist(df["sepal_length"], bins=50 )
+# Show histogram
+plt.show()
+plt.hist(df["sepal_length"], bins=150 )
+plt.show()
+
+
+
+
+
+
+
 
