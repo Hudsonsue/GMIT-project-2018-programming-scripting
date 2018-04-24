@@ -10,6 +10,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import csv
 import sys
+import datetime
+import time
+
 
 ## below allows anyone running script to decide whether to save the print output to file or display in terminal
 
@@ -29,14 +32,18 @@ while True:
     response = input("Display or save to file? D or S > ")
     if response == "S": 
         sys.stdout=open ('generalstats.txt','w') # redirected to file
-        break###turns off interactieve display
+        break
     elif response == "D":break    
     elif "D":break
 
     
-sum_col = (np.sum(A[:,0]))
-avg_col = sum_col/150
+#sum_col = (np.sum(A[:,0]))
+#avg_col = sum_col/150
 
+print('\n'*2)
+# Below prints the current date and time - acts as timestamp on output file if saved
+print ("Run date and time: " ,datetime.datetime.now().strftime("Date: %d-%m-%y    Time: %H-%M"))
+print('\n'*2)
 print (data)  # This printed the dataset 
 
 ## used print statements to create empty lines, single, double and multiples
@@ -97,9 +104,7 @@ summary.to_csv('summary.csv')
 
 
 # Below uses  matplotlib.pyplot to produce and save scatter graphs
-
-  
-## plt.ioff()
+# plt.ioff()
 
 # Sepal characteristics
 x, y =[A[:,0],A[:,1]] 
@@ -107,35 +112,34 @@ plt.xlabel('Sepal Length', fontsize = 14)
 plt.ylabel("Sepal Width", fontsize = 14)
 plt.title("Iris Datset: Sepal Charateristics", fontsize = 18)
 plt.scatter(x, y)
-plt.savefig ('Sepal.png')
-
-plt.show ()
+plt.savefig ('Sepal.png') #saves plot as sepal.png image
+plt.show () #displays plot om termial
 ## note: must save before show as otherwise blank file!
 
 # Petal charateristics
-
+# below is similar to sepal plot with an attempt to distinguish different species by colour
 for i in range (0,len(A)-1):
-    x, y =[A[i][2],A[i][3]] 
-    ##flower = flower_type[i].decode("utf-8")
-	##color = ""
 
-    flower = A[i][4]
-    
-	#flower = flower_type[i].decode("utf-8")
-    #color = ""
-    if flower=='Iris-setosa':color ="red"
-    elif flower =='Iris-versicolor':color="blue"
-    elif flower =='Iris-virginica':color = "green"
-      #  print (flower)
-       # print(x,y)
-   
-    plt.scatter(x, y)
+        x, y =[A[i][2],A[i][3]] 
+        flower = A[i][4]
+        colors =['red', 'blue', 'green']
+        if flower=='Iris-setosa':
+            color ='green'
+        #elif flower =='Iris-versicolor':
+         #   color="blue" 
+        #elif flower =='Iris-virginica':
+         #   color = "green"
+        #print (flower) ##check loop OK
+         #   print(x,y)     ##check loop OK
+        #colors =['red', 'green', 'blue']
+        plt.scatter(x, y, c=colors)
 
-#plt.colors(A[:,4]=="Iris-versicolor",color="blue")
-#plt.colors(A[:,4]=="Iris-virginica",color="red")
+#plt.colors(A[i:,4]=="Iris-versicolor",color="blue")
+#plt.colors(A[i:,4]=="Iris-virginica",color="red")
 plt.xlabel('Petal Length', fontsize = 14)
 plt.ylabel("Petal Width", fontsize = 14)
 plt.title("Iris Datset: Petal Charateristics", fontsize = 18)
+plt.legend
 plt.scatter(x, y)
 plt.savefig ('Petal.png')
 plt.show ()
