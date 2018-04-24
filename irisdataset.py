@@ -156,12 +156,11 @@ for i in range (-1,149):
     if  ((A[i][3] > 1.5) and (A[i][3] < 2.5) and (A[i][4] == 'Iris-virginica')):
         Irisvirginicacount = Irisvirginicacount +1
 
-    #if (((A[i][0] < 6) and (A[i][2]>=4)and (A[i][4] == 'Iris-versicolor')
-     #   or if ((A[i][3] > 1.5) and (A[i][3] < 2.0) and (A[i][4] == 'Iris-virginica'))):
-      #  multicond = multicond +1
-       # continue
+    if ((A[i][0] < 6) and (A[i][2]>=4)and (A[i][4] == 'Iris-versicolor')) or ((A[i][3] > 1.5) and (A[i][3] < 2.0) and (A[i][4] == 'Iris-virginica')):
+       multicond = multicond +1
+       continue
 
 print ("Number of flowers with Petal Width 1cm", PetalWidth1)
 print ("Number of flowers with Petal Width 2cm", PetalWidth2)
 print ("Number of Iris-virginica >1.5 and <2.5 cm", Irisvirginicacount)
-#print ("multi cond", multicond)
+print ("multi cond", multicond)
