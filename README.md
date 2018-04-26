@@ -29,10 +29,10 @@ Wilst the project brief outlined clearly the project minimum requirements the Pr
 *	Iris.csv - the Iris dataset used in irisdatset.py., ??
 *	Check_iriscsv.py – used as a check to ensure Irisdata set opened OK within repository
 *	Irisdataset.py – this contains the majority of the python code for this project. Some of the code involves outputs which are saved as:
-** Sepal.png -most recent saved output of sepal scatter plot within irisdataset.py
-** Petal.png -most recent saved output of petal scatter plot within irisdataset.py
-** Summary.csv – output from describe function within irisdataset.py
-** Generalstats.txt – output of calculated data from irisdataset.py. Time & date stamped. Will only output when Save to File option selected by user input. 
+    * Sepal.png -most recent saved output of sepal scatter plot within irisdataset.py
+    * Petal.png -most recent saved output of petal scatter plot within irisdataset.py
+    * Summary.csv – output from describe function within irisdataset.py
+    * Generalstats.txt – output of data from irisdataset.py. 
 *	Seabornplots.py – this contains scripts used to create plots using the seaborn library and the Iris dataset from seaborn. 
 *	Iris.jpg – a picture used for the readme file
 
