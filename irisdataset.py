@@ -82,6 +82,30 @@ print('\n')
 print("Mean sepal length per species" , data.groupby (4) [0].mean())
 
 
+print('\n')
+print("Minimum sepal width per species" , data.groupby (4) [1].min())
+print('\n')
+print("Maximum sepal width per species" , data.groupby (4) [1].max())
+print('\n')
+print("Mean sepal width per species" , data.groupby (4) [1].mean())
+
+
+print('\n')
+print("Minimum petal length per species" , data.groupby (4) [2].min())
+print('\n')
+print("Maximum petal length per species" , data.groupby (4) [2].max())
+print('\n')
+print("Mean petal length per species" , data.groupby (4) [2].mean())
+
+
+print('\n')
+print("Minimum petal width per species" , data.groupby (4) [3].min())
+print('\n')
+print("Maximum petal width per species" , data.groupby (4) [3].max())
+print('\n')
+print("Mean petal width per species" , data.groupby (4) [3].mean())
+
+
 ##below prints number of records per species
 print('\n') 
 print ("Number of records per species")
@@ -97,11 +121,35 @@ print('\n')
 # below uses the describe function to produce some general statistics of the Iris dataset
 # it is displayed and also saved to csv file summary.csv
 
-print ('STATISTICS USING DESCRIBE FUCTION - output displayed and saved to summary.csv')
+
+print ('STATISTICS USING DESCRIBE - Summary of sepal length ')
 summary = data.groupby(4)[0].describe()
-print (" Summary of data set", summary)
+print (summary)
 summary.to_csv('summary.csv')
 
+print('\n')
+
+print ('STATISTICS USING DESCRIBE - Summary of sepal width')
+summary = data.groupby(4)[1].describe()
+print ( summary)
+summary.to_csv('summary.csv')
+
+print('\n')
+
+print ('STATISTICS USING DESCRIBE -  Summary of petal length')
+summary = data.groupby(4)[2].describe()
+print ( summary)
+summary.to_csv('summary.csv')
+
+print('\n')
+
+print ('STATISTICS USING DESCRIBE - Summary of petal width')
+summary = data.groupby(4)[3].describe()
+print (summary)
+summary.to_csv('summary.csv')
+
+print('\n')
+print('\n')
 
 # Below uses  matplotlib.pyplot to produce and save scatter graphs
 # plt.ioff()
@@ -143,6 +191,7 @@ plt.legend
 plt.scatter(x, y)
 plt.savefig ('Petal.png')
 plt.show ()
+
 
 PetalWidth1 = 0
 PetalWidth2 = 0
