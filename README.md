@@ -26,7 +26,7 @@ Wilst the project brief outlined clearly the project minimum requirements the Pr
 
 ### Exercise files within this repository ###
 *	Project brief.pdf – Project Instructions document by Dr Ian McLouglin
-*	Iris.csv - the Iris dataset used in irisdatset.py., ??
+*	Iris.csv - the Iris dataset used in irisdatset.py [data](https://archive.ics.uci.edu/ml/datasets/iris)
 *	Check_iriscsv.py – used as a check to ensure Irisdata set opened OK within repository
 *	Irisdataset.py – this contains the majority of the python code for this project. Some of the code involves outputs which are saved as:
     * Sepal.png -most recent saved output of sepal scatter plot within irisdataset.py
