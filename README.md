@@ -99,7 +99,7 @@ My final step was to try and add in some real-life functionality. This took the 
 ## Personal Goals ##
 * Much of my day to day work involves data, whilst reasonably proficient in database interrogation and in the use of excel I am not always sure how to analyse and display different data in a MEANINGFUL way. I am hoping that what I learn during this module/project can be used and expanded upon in my daily work. 
 * Embarking on further education was one of a series of personal goals/challenges I set myself to mark my half century milestone. 
-When researching courses this [course](https://www.gmit.ie/computing/higher-diploma-science-computing-data-analytics-ict-skills)it ticked a good many of my requirement boxes, interesting, relevant, cheap and potentially useful from a career progression perspective. 
+When researching courses this[course](https://www.gmit.ie/computing/higher-diploma-science-computing-data-analytics-ict-skills) it ticked a good many of my requirement boxes, interesting, relevant, cheap and potentially useful from a career progression perspective. 
 
 ## Challenges & Lessons Learned ##
 * Broadband speed was an initial challenge as I was unable to download content to watch offline and had poor home BB. Luck intervened with the timely rollout of High Speed Broadband to my rural location in January.  
