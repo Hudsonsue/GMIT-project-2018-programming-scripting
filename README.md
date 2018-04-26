@@ -25,16 +25,16 @@ Wilst the project brief outlined clearly the project minimum requirements the Pr
 * As this is a new course and I have an interest in student retention I decided to also document within the 'readme' personal goals, challenges and lessons learned.These sections can be found towards the end of this readme.
 
 ### Exercise files within this repository ###
-•	Project brief.pdf – Project Instructions document by Dr Ian McLouglin
-•	Iris.csv - the Iris dataset used in irisdatset.py., ??
-•	Check_iriscsv.py – used as a check to ensure Irisdata set opened OK within repository
-•	Irisdataset.py – this contains the majority of the python code for this project. Some of the code involves outputs which are saved as:
-o	Sepal.png -most recent saved output of sepal scatter plot within irisdataset.py
-o	Petal.png -most recent saved output of petal scatter plot within irisdataset.py
-o	Summary.csv – output from describe function within irisdataset.py
-o	Generalstats.txt – output of calculated data from irisdataset.py. Time and date stamped and will only output when Save to File option selected by user input. 
-•	Seabornplots.py – this contains scripts used to create plots using the seaborn library and the Iris dataset from seaborn. 
-•	Iris.jpg – a picture used for the readme file
+*	Project brief.pdf – Project Instructions document by Dr Ian McLouglin
+*	Iris.csv - the Iris dataset used in irisdatset.py., ??
+*	Check_iriscsv.py – used as a check to ensure Irisdata set opened OK within repository
+*	Irisdataset.py – this contains the majority of the python code for this project. Some of the code involves outputs which are saved as:
+** Sepal.png -most recent saved output of sepal scatter plot within irisdataset.py
+** Petal.png -most recent saved output of petal scatter plot within irisdataset.py
+** Summary.csv – output from describe function within irisdataset.py
+** Generalstats.txt – output of calculated data from irisdataset.py. Time & date stamped. Will only output when Save to File option selected by user input. 
+*	Seabornplots.py – this contains scripts used to create plots using the seaborn library and the Iris dataset from seaborn. 
+*	Iris.jpg – a picture used for the readme file
 
 Irisdataset.py and seabornplots.py contain additional comments and references not contained herein. 
 
@@ -59,10 +59,10 @@ Initial investigation of the dataset revolved around using python skills learnt 
 My next step was to plot he data and to do this I attempted to plot scatter graphs of the main characteristic pairs (petal width and length and sepal length and width). I was somewhat hampered by my failure to change the colour of the individual species. 
 I then used some library features (describe from pandas and seaborn for plots). This demonstrates the power of python as what was taking me hours could be done in minutes with the correct library. 
 My final step was to try and add in some real-life functionality. This took the form of:
-•	User input to decide whether to display output on screen or save to file
-•	Adding date and time stamp if saving to file, thus allowing users 
-•	Saving output to csv
-•	Saving plots to file 
+*	User input to decide whether to display output on screen or save to file
+*	Adding date and time stamp if saving to file, thus allowing users 
+*	Saving output to csv
+*	Saving plots to file 
 
 
 ## Investigation Findings ##
