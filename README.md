@@ -45,7 +45,7 @@ A more detailed description of irisdataset.py and seabornplots.py is contained w
 ## Code language ##
 All coding is [Python 3.6.5](https://www.python.org/)
 
-# Fishers Dataset – who & why ?#
+# Fishers Dataset – who & why? #
 Sir Ronald Fisher (1890-1962) was a British geneticist and statistician. He was schooled in [Harrow Public School](https://www.harrowschool.org.uk/) and studied Astronomy at [Cambridge University](https://www.cam.ac.uk/).
 It was in his 1936 paper *The use of multiple measurements in taxonomic problems* that theIris Dataset was introduced. The dataset is a set of measurements (cm) of both Petal and Sepal length and width across three species of Iris. There are 50 measurements for each of species, *Iris setosa*, *Iris virginica* and *Iris versicolor*.
 The data was used by Fisher to develop a linear discriminant model to distinguish species from each other. 
