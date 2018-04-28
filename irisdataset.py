@@ -127,6 +127,14 @@ print('\n')
 print ('STATISTICS USING DESCRIBE')
 print ('-------------------------') 
 
+print ()
+features_all = data.describe ()
+print (features_all)
+features_all.to_csv('summary.csv')
+
+
+
+
 for i in range (0,4):
     summary = data.groupby(4)[i].describe()
     feature = ['sepal length', 'sepal width', 'petal length', 'petal width']
@@ -134,7 +142,6 @@ for i in range (0,4):
     print()
     print (summary)
     print()
-    summary.to_csv('summary.csv')
 print('\n')
 print('\n')
 
