@@ -120,34 +120,21 @@ print('\n')
 
 # below uses the describe function to produce some general statistics of the Iris dataset
 # it is displayed and also saved to csv file summary.csv
+# initially created separate scripts for each feature but then wrote a looped version of the script
+# used course videos to assist in looped script
 
+ 
+print ('STATISTICS USING DESCRIBE')
+print ('-------------------------') 
 
-print ('STATISTICS USING DESCRIBE - Summary of sepal length ')
-summary = data.groupby(4)[0].describe()
-print (summary)
-summary.to_csv('summary.csv')
-
-print('\n')
-
-print ('STATISTICS USING DESCRIBE - Summary of sepal width')
-summary = data.groupby(4)[1].describe()
-print ( summary)
-summary.to_csv('summary.csv')
-
-print('\n')
-
-print ('STATISTICS USING DESCRIBE -  Summary of petal length')
-summary = data.groupby(4)[2].describe()
-print ( summary)
-summary.to_csv('summary.csv')
-
-print('\n')
-
-print ('STATISTICS USING DESCRIBE - Summary of petal width')
-summary = data.groupby(4)[3].describe()
-print (summary)
-summary.to_csv('summary.csv')
-
+for i in range (0,4):
+    summary = data.groupby(4)[i].describe()
+    feature = ['sepal length', 'sepal width', 'petal length', 'petal width']
+    print (" Summary of data set",feature[i])
+    print()
+    print (summary)
+    print()
+    summary.to_csv('summary.csv')
 print('\n')
 print('\n')
 
