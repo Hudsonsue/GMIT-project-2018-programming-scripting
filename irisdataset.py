@@ -49,6 +49,7 @@ print ('**************************************************')
 print ("Run date and time: " ,datetime.datetime.now().strftime("Date: %d-%m-%y    Time: %H-%M"))
 print ('**************************************************')
 print()
+print()
 
 # print (data)  # This printed the dataset and was only used for code checking purposes
 # I have used print statements to create empty lines, single, double and multiples
@@ -65,14 +66,14 @@ for i in range (0,4):
     print ("Mean", feature [i], " for all species is", np.mean(A[:,i]),"cm")
     print()
 
-print('\n'*2)
+print('\n')
 
 # below produces basic stats, this time grouped by species
 #data.groupby(4)[0].min()
 
 print ('SIMPLE STATISTICS GROUPED BY SPECIES')
 print ('------------------------------------')
-print('\n')
+print()
 print("Minimum sepal length per species" , data.groupby (4) [0].min())
 print('\n')
 print("Maximum sepal length per species" , data.groupby (4) [0].max())
@@ -107,6 +108,7 @@ print("Mean petal width per species" , data.groupby (4) [3].mean())
 ##below prints number of records per species
 print('\n') 
 print ("Number of records per species")
+print ('-----------------------------')
 print (data[4].value_counts())
 
 print('\n')
@@ -129,10 +131,13 @@ print ('-------------------------')
 # it is displayed and also saved to csv file summary.csv
 
 print ('statistics for each feature for all species')
-print ()
+print ('-------------------------------------------')
+print()
 features_all = datawithheaders.describe ()
 print (features_all)
 features_all.to_csv('summary.csv')
+print('\n')
+
 
 
 # Below is a loop to print statistcs using describe grouped by species
@@ -140,7 +145,8 @@ features_all.to_csv('summary.csv')
 for i in range (0,4):
     summary = data.groupby(4)[i].describe()
     feature = ['sepal length', 'sepal width', 'petal length', 'petal width']
-    print (" Summary of data set",feature[i])
+    print ("Summary of data set",feature[i])
+    print ('---------------------------------')
     print()
     print (summary)
     print()
