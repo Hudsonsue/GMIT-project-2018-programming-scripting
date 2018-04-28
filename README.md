@@ -1,3 +1,4 @@
+
 # GMIT-project-2018-programming-scripting #
 Project 2018 for crn 52167 Programming &amp; Scripting. Student **G00219132 SHUDSON**
 
@@ -44,13 +45,24 @@ When prompted select whether to dislay any text ouput or save to file.
 If you select to save output you will find it in *generalstats.txt*, otherwise it will display on your terminal.
 Output from the section of code that uses pandas describe to summarise the entire dataset will be saved as CSV in *summary.csv*and can be opened with excel to view. 
 Two plots are contained in this file and will be saved as *petal.png* (a scatter plot of petal width and length) and *sepal.png* (a scatter plot of sepal width and length).
-**Please note** 
+
+*Please note* 
 * when running irisdataset.py plots remain open and the programme pauses until closed by users. Despite research I was unable to find a way to allow the program to carry on with open plots. 
 * I was unable to distinguish species by colour in these plots, I have left as comments some of my attempt to distinguish by colour in the petal characteristics plot code. One approach I was trying was to use if statements to assign colour by species name. I had to stop trying as it was holding up my project!
-**Run seabornplots.py**
-This programme imports the seaborn library and contains plots based on using seaborn. 
-Sepal characteristics
 
+**Run seabornplots.py**
+
+This programme imports the seaborn library and contains plots based on using seaborn. 
+You will be asked whether or not you wish to display the Iris Dataset, select Y to display, any other selection will result in no display of dataset.
+
+The following plots are contained and will display when the programme is executed. 
+* Scatter plot of sepal width & length. This can be run with regression lines if the user wishes (by selecting Y when prompted)
+* Scatter plot of petal width & length.
+* Histogram based on petal length
+* Histogram based on sepal length
+* Histogram showing all four characteristics, petal and sepal length and width.
+
+It should be noted that unlike the scatter plots within the irisdataset.py programme the seaborn scatter plots show species  distinguished by colour.
 
 ## Code language ##
 All coding is [Python 3.6.5](https://www.python.org/)
