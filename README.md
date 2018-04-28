@@ -13,10 +13,9 @@ Bouquet *Flowers by Kay Galway*, Photograph  *Yann Studios, Galway*
 
 ![iris](iris.jpg)
 
-# Project Brief #
+## Project Brief and scope ##
 Project brief and notes: [project brief](https://github.com/Hudsonsue/GMIT-project-2018-programming-scripting/blob/master/project%20brief.pdf)
 
-# Project Scope #
 Whilst the project brief outlined clearly the project minimum requirements the Project Scope was not dictated. Following an initial period of exploration of the dataset I decided to scope in line with personal goals as outlined below. I therefore decided to use similar analysis to work tasks that I would normally perform in Excel/SQL such as group by statistics, plots and outputting of results to files.
 
 * General statistics on entire dataset. 
@@ -26,7 +25,7 @@ Whilst the project brief outlined clearly the project minimum requirements the P
 
 * As this is a new course and I have an interest in student retention I decided to also document within the 'readme' personal goals, challenges and lessons learned. These sections can be found towards the end of this readme.
  
-### Exercise files within this repository ###
+## Exercise files within this repository ##
 *	Project brief.pdf – Project Instructions document by Dr Ian McLouglin
 *	Iris.csv - the Iris dataset used in irisdatset.py [data](https://archive.ics.uci.edu/ml/datasets/iris)
 *	Check_iriscsv.py – used as a check to ensure Iris dataset opened OK within repository
@@ -42,21 +41,20 @@ Irisdataset.py and seabornplots.py contain additional comments and references no
 
 Please note when running irisdataset.py and seaborn.py that plots remain open and the programme pauses until closed by users. Despite research I was unable to find a way to allow the program to carry on with open plots. 
 
-A more detailed description of irisdataset.py and seabornplots.py is contained within the section ‘investigation methodology’ below.
-
 ## Code language ##
 All coding is [Python 3.6.5](https://www.python.org/)
 
 # Fishers Dataset – who & why? #
-Sir Ronald Fisher (1890-1962) was a British geneticist and statistician. He was schooled in [Harrow Public School](https://www.harrowschool.org.uk/) and studied Astronomy at [Cambridge University](https://www.cam.ac.uk/).
-It was in his 1936 paper *The use of multiple measurements in taxonomic problems* that theIris Dataset was introduced. The dataset is a set of measurements (cm) of both Petal and Sepal length and width across three species of Iris. There are 50 measurements for each of species, *Iris setosa*, *Iris virginica* and *Iris versicolor*.
+Sir Ronald Fisher (1890-1962) was a British geneticist and statistician. He was schooled in [Harrow Public School](https://www.harrowschool.org.uk/) and gained a first in Astronomy from [Cambridge University](https://www.cam.ac.uk/).
+
+It was in his 1936 paper *The use of multiple measurements in taxonomic problems* that the Iris Dataset was introduced. The dataset is a set of measurements (cm) of both Petal and Sepal length and width across three species of Iris. There are 50 measurements for each of species, *Iris setosa*, *Iris virginica* and *Iris versicolor*.
 The data was used by Fisher to develop a linear discriminant model to distinguish species from each other. 
 The Dataset is used as a dataset for testing purposes in computer science; it is used also to explore data mining. 
 Whilst researching the dataset and use thereof I came across a [techopedia definition](https://www.techopedia.com/definition/32880/iris-flower-data-set) which I felt summed it up nicely.
 
 One might question why such an innocuous group of measurements is so widely used and during my research I found the following which I felt was a great explanation for a novice to the area of data analytics such as myself, [stack exchange Q/A](https://stats.stackexchange.com/questions/74776/what-aspects-of-the-iris-data-set-make-it-so-successful-as-an-example-teaching)
 
-## Investigation Methodology ##
+# Investigation Methodology #
 Initial investigation of the dataset revolved around using python skills learnt to produce general stats: Maximum, minimum, mean and counts. This was done at overall level and at species level. 
 My next step was to plot he data and to do this I attempted to plot scatter graphs of the main characteristic pairs (petal width and length and sepal length and width). I was somewhat hampered by my failure to change the colour of the individual species. 
 I then used some library features (describe from pandas and seaborn for plots). This demonstrates the power of python as what was taking me hours could be done in minutes with the correct library. 
@@ -69,7 +67,7 @@ My next challenge was to try and add in some real-life functionality. This took 
 The approach I took was to get code working for one item (for example the sepal length), check output was correct and once happy it was correct I reproduced code for all items. Only when I was happy that all output was correct did I start adding in loops to avoid unnecessary repetition of code. Again I got the loops working for one of my sections of code and then applied the logic elsewhere. 
 My final step was to spend some time trying to tidy up my code output. 
 
-## Investigation Findings ##
+# Investigation Findings #
 I kept my analysis fairly simple as I wanted to concentrate on my coding skills. When researching 
 
 
@@ -87,13 +85,12 @@ I kept my analysis fairly simple as I wanted to concentrate on my coding skills.
 
 
 
-
-## References ##
-# The following websites were used for general reference alongside course videos #
+# References #
+### The following websites were used for general reference alongside course videos ###
 Python Tutorial https://docs.python.org/3/tutorial/
 pyplot tutorial https://matplotlib.org/users/pyplot_tutorial.html
 
-# specific tasks /troubleshooting #
+### specific tasks /troubleshooting ###
 
 https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.describe.html 
 https://stackoverflow.com/questions/32835498/pandas-python-describe-formatting-output
@@ -101,19 +98,20 @@ https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-d
 https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matplotlib/
 http://www.pythonforbeginners.com/basics/python-datetime-time-examples
 
-# The following were interesting sources to see how other's analysed the Iris Dataset #
+### The following were interesting sources to see how other's analysed the Iris Dataset ###
 
 http://www.pybloggers.com/2015/09/my-first-time-using-matplotlib/
 https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342  
 https://www.kaggle.com/benhamner/python-data-visualizations
 
 
-## Personal Goals ##
+# Personal Goals, challenges and lessons learned #
+### personal goals ###
 * Much of my day to day work involves data, whilst reasonably proficient in database interrogation and in the use of excel I am not always sure how to analyse and display different data in a *meaningful* way. I am hoping that what I learn during this module/project can be used and expanded upon in my daily work. 
 * Embarking on further education was one of a series of personal goals/challenges I set myself to mark my half century milestone. 
 When researching courses [this course](https://www.gmit.ie/computing/higher-diploma-science-computing-data-analytics-ict-skills) ticked a good many of my requirement boxes, interesting, relevant, cheap and potentially useful from a career progression perspective. 
 
-## Challenges & Lessons Learned ##
+### Challenges & Lessons Learned ###
 * Broadband speed was an initial challenge as I was unable to download content to watch offline and had poor home BB. Luck intervened with the timely rollout of High Speed Broadband to my rural location in January.  
 * Freeing up enough time to devote to the programming and scripting module proved difficult as it is not a subject that I could dip in and out of for 20 or 30 minutes and I found I needed at least two hours at a time to immerse myself in the module. I eventually found my best working method which was to watch the videos on my PC whilst attempting the examples on a laptop and then making relevant notes. Then and only then did I attempt weekly tasks! 
 * Changed way of learning – in past study life all contact was in a classroom/lab environment and the online environment has its challenges as it was easy to get bogged down on small problems which in a classroom environment would have been solved quickly by consulting with peers/academics. I found the concept of discussion boards and google slightly alien and potentially overwhelming. 
