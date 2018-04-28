@@ -49,8 +49,14 @@ Two plots are contained in this file and will be saved as *petal.png* (a scatter
 * I was unable to distinguish species by colour in these plots, I have left as comments some of my attempt to distinguish by colour in the petal characteristics plot code. One approach I was trying was to use if statements to assign colour by species name. I had to stop trying as it was holding up my project!
 **Run seabornplots.py**
 This programme imports the seaborn library and contains plots based on using seaborn. 
-Sepal characteristics
-
+You will be asked whether or not you wish to display the Iris Dataset, select Y to display, any other selection will result in no display of dataset.
+The following plots are contained and will display when the programme is executed. 
+* Scatter plot of sepal width & length. This can be run with regression lines if the user wishes (by selecting Y when prompted)
+* Scatter plot of petal width & length.
+* Histogram based on petal length
+* Histogram based on sepal length
+* Histogram showing all four characteristics, petal and sepal length and width.
+It should be noted that unlike the scatter plots within the irisdataset.py programme the seaborn scatter plots show species  distinguished by colour.
 
 ## Code language ##
 All coding is [Python 3.6.5](https://www.python.org/)
