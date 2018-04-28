@@ -1,7 +1,7 @@
 # GMIT-project-2018-programming-scripting #
 Project 2018 for crn 52167 Programming &amp; Scripting. Student **G00219132 SHUDSON**
 
-## Purpose ##
+## Purpose of repository ##
 This repository contains the Project of Student **G00219132, Susan Hudson** for module Programming and Scripting. The module is delivered as part of the [Higher Diploma in Data Analytics](https://www.gmit.ie/computing/higher-diploma-science-computing-data-analytics-ict-skills) in GMIT.
 It contain the dataset, scripts and notes relating to the project
 
@@ -13,7 +13,7 @@ Bouquet *Flowers by Kay Galway*, Photograph  *Yann Studios, Galway*
 
 ![iris](iris.jpg)
 
-## Project Brief and scope ##
+## Project Brief & scope ##
 Project brief and notes: [project brief](https://github.com/Hudsonsue/GMIT-project-2018-programming-scripting/blob/master/project%20brief.pdf)
 
 Whilst the project brief outlined clearly the project minimum requirements the Project Scope was not dictated. Following an initial period of exploration of the dataset I decided to scope in line with personal goals as outlined below. I therefore decided to use similar analysis to work tasks that I would normally perform in Excel/SQL such as group by statistics, plots and outputting of results to files.
@@ -23,7 +23,7 @@ Whilst the project brief outlined clearly the project minimum requirements the P
 * Produce some graphs and learn how to save these.
 * Learn how to save output of statistics to file.
 
-* As this is a new course and I have an interest in student retention I decided to also document within the 'readme' personal goals, challenges and lessons learned. These sections can be found towards the end of this readme.
+* As this is a new course and, in my worklife I have an interest in student retention, I decided to also document within the 'readme' personal goals, challenges and lessons learned. These sections can be found towards the end of this readme.
  
 ## Exercise files within this repository ##
 *	Project brief.pdf – Project Instructions document by Dr Ian McLouglin
@@ -39,7 +39,18 @@ Whilst the project brief outlined clearly the project minimum requirements the P
 
 Irisdataset.py and seabornplots.py contain additional comments and references not contained herein. 
 
-Please note when running irisdataset.py and seaborn.py that plots remain open and the programme pauses until closed by users. Despite research I was unable to find a way to allow the program to carry on with open plots. 
+**Run Irisdataset.py**
+When prompted select whether to dislay any text ouput or save to file.
+If you select to save output you will find it in *generalstats.txt*, otherwise it will display on your terminal.
+Output from the section of code that uses pandas describe to summarise the entire dataset will be saved as CSV in *summary.csv*and can be opened with excel to view. 
+Two plots are contained in this file and will be saved as *petal.png* (a scatter plot of petal width and length) and *sepal.png* (a scatter plot of sepal width and length).
+**Please note** 
+* when running irisdataset.py plots remain open and the programme pauses until closed by users. Despite research I was unable to find a way to allow the program to carry on with open plots. 
+* I was unable to distinguish species by colour in these plots, I have left as comments some of my attempt to distinguish by colour in the petal characteristics plot code. One approach I was trying was to use if statements to assign colour by species name. I had to stop trying as it was holding up my project!
+**Run seabornplots.py**
+This programme imports the seaborn library and contains plots based on using seaborn. 
+Sepal characteristics
+
 
 ## Code language ##
 All coding is [Python 3.6.5](https://www.python.org/)
