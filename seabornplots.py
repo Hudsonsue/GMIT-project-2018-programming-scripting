@@ -12,6 +12,8 @@ import seaborn as sns
 # import dataset from seaborn
 df = sns.load_dataset('iris')
 
+# below is a piece of code that will prompt the user to select whether they wish to see the dataset displayed.
+# if Y is chosen it wil display, otherwise it won't.
 while True:
     show = input ("do you want to display the dataset?, enter Y for Yes, N for No > ")
     if show == "Y":
@@ -21,7 +23,6 @@ while True:
         break
     elif "N":
         break
-
 
 # below runs a seaborn scatter plot of sepal length & width
 # It uses 'hue' to change colours by species
@@ -82,6 +83,8 @@ plt.xlabel('Sepal Length Bands', fontsize = 10)
 plt.ylabel("Instances", fontsize = 10)
 plt.show()# Show histogram
 
+# below is a seaborn plot with histograms of all chaaacteristics
+# included to show how powerful libraries are !
 # histograms
 df.hist()
 plt.show()
