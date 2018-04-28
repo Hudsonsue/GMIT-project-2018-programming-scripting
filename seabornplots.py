@@ -12,12 +12,32 @@ import seaborn as sns
 # import dataset from seaborn
 df = sns.load_dataset('iris')
 
-print(df) #printing the data
+while True:
+    show = input ("do you want to display the dataset?, enter Y for Yes, N for No > ")
+    if show == "Y":
+        print(df) #printing the data
+        break
+    elif show == "N":
+        break
+    elif "N":
+        break
 
- 
-# Use 'hue' to change colours by species
-# below plots sepal lngth and width in a scatterplot
-sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg= False, hue='species', legend=False)
+
+# below runs a seaborn scatter plot of sepal length & width
+# It uses 'hue' to change colours by species
+# it places a legend in the bottom right of the plot
+# user is asked whether they want regression lines or not, if invalid selection made will assume no regression lines
+while True:
+    response = input ("do you want to show regression in this scatter plot, Y or N > ")
+    if response =="Y":
+        sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg= True, hue='species')
+        break
+    elif response =="N":
+        sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg= False, hue='species')
+        break
+    elif "N":
+        sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg= False, hue='species')
+        break
 plt.legend(loc='lower right')
 plt.xlabel('Sepal Length', fontsize = 10)
 plt.ylabel("Sepal Width", fontsize = 10)
@@ -25,7 +45,11 @@ plt.title("Iris Datset: Sepal Charateristics")
 plt.tight_layout
 plt.show()
 
+
 # below plots petal length and width in a scatter plot
+# It uses 'hue' to change colours by species
+# it places a legend in the bottom right of the plot
+# it does not have regression lines
 sns.lmplot( x="petal_length", y="petal_width", data=df, fit_reg=False, hue='species', legend=False)
 plt.title("Iris Datset: Petal Charateristics")
 plt.xlabel('Petal Length', fontsize = 10)
@@ -33,7 +57,6 @@ plt.ylabel("Petal Width", fontsize = 10)
 # Move the legend to an empty part of the plot
 plt.legend(loc='lower right')
 plt.show()
-
 
 
 # Histograms of features
