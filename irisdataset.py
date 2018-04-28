@@ -4,7 +4,8 @@
 # it will form the basis of the statistical analysis
 # note - throughout I have used print statements to create empty lines, single, double and multiples
 
-#Import libraries
+#Import libraries 
+# as I built up the script I imported various libraries as needed 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -14,14 +15,14 @@ import datetime
 import time
 
 
-## below allows anyone running script to decide whether to save the print output to file or display in terminal
+# Below reads in data using Pandas and creates Numpy array of data
+# As the csv file I had used throughout had no headers I read in a version and added names to columns for use with pandas' describe.
+#
 
-# select plot style
-plt.style.use('seaborn-whitegrid')
-
-# below reads in data using Pandas and creates Numpy array of data
 data = pd.read_csv("iris.csv", header=-1) # note I set header =-1 as data in row 0
 A = np.array (data) # created a NumpPy array of the dataset
+datawithheaders = pd.read_csv("iris.csv", names= ('sepal length', 'sepal width', 'petal length', 'petal width', 'species'))
+
 
 ## Script below allows anyone running script to decide whether to save the print output to file or display in terminal
 ## if D is selected output will display on terminal
@@ -36,44 +37,41 @@ while True:
     elif response == "D":break    
     elif "D":break
 
-    
-#sum_col = (np.sum(A[:,0]))
-#avg_col = sum_col/150
 
 print('\n'*2)
 # Below prints the current date and time - acts as timestamp on output file if saved
+# http://www.pythonforbeginners.com/basics/python-datetime-time-examples was a useful source I used
+ 
+
+print ('Output of Irisdataset analysis: Student G00219132, Susan Hudson')
+print('\n'*2)
+print ('**************************************************')
 print ("Run date and time: " ,datetime.datetime.now().strftime("Date: %d-%m-%y    Time: %H-%M"))
-print('\n'*2)
-print (data)  # This printed the dataset 
+print ('**************************************************')
+print()
 
-## used print statements to create empty lines, single, double and multiples
-
-print('\n'*2)
-
+# print (data)  # This printed the dataset and was only used for code checking purposes
+# I have used print statements to create empty lines, single, double and multiples
 
 ## below are some basic stats for all species
-print ('SIMPLE STATISTICS FOR ALL MEASUREMENTS')
-print ("Minimum Sepal length all species is",np.min(A[:,0]),"cm")
-print ("Maximum Sepal length all species is",np.max(A[:,0]),"cm")
-print ("Mean Sepal length all species is", np.mean(A[:,0]),"cm")
-print()
-print ("Minimum Sepal width all species is",np.min(A[:,1]),"cm")
-print ("Maximum Sepal width all species is",np.max(A[:,1]),"cm")
-print ('Mean Sepal width all species is', np.mean(A[:,1]),"cm")
-print()
-print ("Minimum Petal Length all species is",np.min(A[:,2]),"cm")
-print ("Maximum Petal Length all species is",np.max(A[:,2]),"cm")
-print ('Mean Petal Length all species is', np.mean(A[:,2]),"cm")
-print()
-print ("Minimum Petal width all species is",np.min(A[:,3]),"cm")
-print ("Maximum Petal width all species is",np.max(A[:,3]),"cm")
-print ('Mean Petal width all species is', np.mean(A[:,3]),"cm")
+
+print('BASIC STATISTICS ALL SPECIES')
+print('----------------------------')
+
+for i in range (0,4):
+    feature = ['sepal length', 'sepal width', 'petal length', 'petal width']
+    print ("Minimum", feature [i], "for all species is", np.min(A[:,i]),"cm")
+    print ("Maximum", feature [i], "for all species is",np.max(A[:,i]),"cm")
+    print ("Mean", feature [i], " for all species is", np.mean(A[:,i]),"cm")
+    print()
+
+print('\n'*2)
 
 # below produces basic stats, this time grouped by species
 #data.groupby(4)[0].min()
 
 print ('SIMPLE STATISTICS GROUPED BY SPECIES')
-
+print ('------------------------------------')
 print('\n')
 print("Minimum sepal length per species" , data.groupby (4) [0].min())
 print('\n')
@@ -113,27 +111,31 @@ print (data[4].value_counts())
 
 print('\n')
 
-# below uses the describe function to produce some statistics of the Iris dataset
-# it is displayed and also saved to csv file summary.csv
-
-print('\n')
-
-# below uses the describe function to produce some general statistics of the Iris dataset
-# it is displayed and also saved to csv file summary.csv
-# initially created separate scripts for each feature but then wrote a looped version of the script
-# used course videos to assist in looped script
+# Below uses the describe function to produce some statistics of the Iris dataset
+# https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.describe.html
+# Additional sources of reference, when troubleshooting are listed below
+# 
+# https://stackoverflow.com/questions/32835498/pantdas-python-describe-formatting-output 
+# https://stackoverflow.com/questions/34091877/how-to-add-header-row-to-a-pandas-dataframe 
+# 
+# Iinitially created separate scripts for each feature but then wrote a looped version of the script
+# I used GMIT Programming & Scripting course videos to assist in looped script
 
  
 print ('STATISTICS USING DESCRIBE')
 print ('-------------------------') 
 
+# Script below produces statistics for features across all species 
+# it is displayed and also saved to csv file summary.csv
+
+print ('statistics for each feature for all species')
 print ()
-features_all = data.describe ()
+features_all = datawithheaders.describe ()
 print (features_all)
 features_all.to_csv('summary.csv')
 
 
-
+# Below is a loop to print statistcs using describe grouped by species
 
 for i in range (0,4):
     summary = data.groupby(4)[i].describe()
@@ -160,6 +162,8 @@ plt.show () #displays plot om termial
 
 # Petal charateristics
 # below is similar to sepal plot with an attempt to distinguish different species by colour
+# it did now work but I am leaving my attempt as may revisit when knowledge grows
+
 for i in range (0,len(A)-1):
 
         x, y =[A[i][2],A[i][3]] 
