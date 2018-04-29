@@ -77,6 +77,7 @@ Whilst researching the dataset and use thereof I came across a [techopedia defin
 
 One might question why such an innocuous group of measurements is so widely used and during my research I found the following which I felt was a great explanation for a novice to the area of data analytics such as myself, [stack exchange Q/A](https://stats.stackexchange.com/questions/74776/what-aspects-of-the-iris-data-set-make-it-so-successful-as-an-example-teaching)
 
+
 # Investigation Methodology #
 Initial investigation of the dataset revolved around using python skills learnt to produce general stats: Maximum, minimum, mean and counts. This was done at overall level and at species level. 
 My next step was to plot he data and to do this I attempted to plot scatter graphs of the main characteristic pairs (petal width and length and sepal length and width). I was somewhat hampered by my failure to change the colour of the individual species. 
@@ -123,7 +124,7 @@ http://www.pythonforbeginners.com/basics/python-datetime-time-examples
 
 ### The following were interesting sources to see how other's analysed the Iris Dataset ###
 
-http://www.pybloggers.com/2015/09/my-first-time-using-matplotlib/
+http://www.pybloggers.com/2015/09/my-first-time-using-matplotlib
 https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342  
 https://www.kaggle.com/benhamner/python-data-visualizations
 
