@@ -100,7 +100,18 @@ My final step was to spend some time trying to tidy up my code output.
 
 # Investigation Findings #
 I kept my analysis fairly simple as I wanted to concentrate on my coding skills. 
-If time permitted I was going to use the
+
+The dataset contains a total of 150 sets of measurements with equal numbers of each of the three species, *Iris setosa*, *Iris virginica* and *Iris versicolor*.
+Sepal Length ranges from 4.3cm to 7.9cm with the *Iris virginica* having the longest Sepals and *Iris setosa* the shortest.
+Sepal Width ranges from 5cm to 5.7cm and it is *Iris setosa*  that has the widest sepals with *Iris versicolor* having the narrowest sepals.
+Petal Length ranges from 3.6cm to 6.9cm and *Iris virginica* has the longest petals and *Iris setosa* the shortest.
+Petal Wodth ranges from 0.1cm to 2.5cm with *Iris virginica* having the widest petals and *Iris setosa* the narrowest.
+
+It can be seen from the scatter plots that *Iris setosa* has characteristics that separate it from the other species both in terms of petal and sepal. It would therefore be relatively easy to identify *Iris setosa* from these two measurements. *Iris visginica* and *Iris versicolor* overlap considerably within the scatter plots and would need to be considered by looking at both petal and sepal.
+
+The final part of my programme was a series of conditions/counts, the logic of these I envisaged might be able to do a prediction of flower species for entered measurements. My aspiration being to load in a new dataset with measurements and predict based on the iris dataset. However to do this would require realistic measurements as otherwise I would be predicting nonsense! 
+So instead I have confined myself to the scenatio where someone chances upon an Iris (in their wedding flowers perhaps!!) and wants to know which species it belongs to!
+looking at the analysis done by Patrick Hoey [9] it should be possible to create some conditions based on sepal length, petal length and petal width that would be a reasonable predictor. 
 
 
 
@@ -124,21 +135,22 @@ pyplot tutorial https://matplotlib.org/users/pyplot_tutorial.html
 
 ### specific tasks /troubleshooting ###
 
-https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.describe.html 
-https://stackoverflow.com/questions/32835498/pandas-python-describe-formatting-output
-https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it-using-matplotlib
-https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matplotlib/
-http://www.pythonforbeginners.com/basics/python-datetime-time-examples
+[1] https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.describe.html 
+[2] https://stackoverflow.com/questions/32835498/pandas-python-describe-formatting-output
+[3] https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it-using-matplotlib
+[4] https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matplotlib/
+[5] http://www.pythonforbeginners.com/basics/python-datetime-time-examples
+[6] http://seaborn.pydata.org/tutorial.html
 
 ### The following were interesting sources to see how other's analysed the Iris Dataset ###
 
-http://www.pybloggers.com/2015/09/my-first-time-using-matplotlib
+[6] http://www.pybloggers.com/2015/09/my-first-time-using-matplotlib
 
-https://www.kaggle.com/benhamner/python-data-visualizations
+[7] https://www.kaggle.com/benhamner/python-data-visualizations
 
-https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342  
+[8] https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342  
 
-
+[9] http://patrickhoey.com/downloads/Computer_Science/03_Patrick_Hoey_Data_Visualization_Dataset_paper.pdf
 
 # Personal Goals, challenges and lessons learned #
 ### personal goals ###
