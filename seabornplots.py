@@ -31,13 +31,13 @@ while True:
 while True:
     response = input ("do you want to show regression in this scatter plot, Y or N > ")
     if response =="Y":
-        sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg= True, hue='species')
+        sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg= True, hue='species',legend=False)
         break
     elif response =="N":
-        sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg= False, hue='species')
+        sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg= False, hue='species',legend=False)
         break
     elif "N":
-        sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg= False, hue='species')
+        sns.lmplot( x="sepal_length", y="sepal_width", data=df, fit_reg= False, hue='species',legend=False)
         break
 plt.legend(loc='lower right')
 plt.xlabel('Sepal Length', fontsize = 10)
