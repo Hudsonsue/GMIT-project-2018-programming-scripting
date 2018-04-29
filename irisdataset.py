@@ -17,7 +17,7 @@ import time
 
 # Below reads in data using Pandas and creates Numpy array of data
 # As the csv file I had used throughout had no headers I read in a version and added names to columns for use with pandas' describe.
-#
+
 
 data = pd.read_csv("iris.csv", header=-1) # note I set header =-1 as data in row 0
 A = np.array (data) # created a NumpPy array of the dataset
@@ -197,6 +197,12 @@ plt.savefig ('Petal.png')
 plt.show ()
 
 
+
+# below are some examples of using conditions to output counts
+# these sort of conditions ccould possible be used to make very rough predictions 
+# for example upon entering characteristics statements with multiple conditions could determine what species imputs might belong to
+
+
 PetalWidth1 = 0
 PetalWidth2 = 0
 Irisvirginicacount = 0
@@ -207,7 +213,7 @@ i=0
 for i in range (-1,149):
     if A[i][3] == 1:
         PetalWidth1 = PetalWidth1 + 1
-    if  A[i][3] == 2:
+    if  A[i][3] == 2:   
         PetalWidth2 = PetalWidth2 + 1
 
     if  ((A[i][3] > 1.5) and (A[i][3] < 2.5) and (A[i][4] == 'Iris-virginica')):
@@ -215,8 +221,10 @@ for i in range (-1,149):
 
     if ((A[i][0] < 6) and (A[i][2]>=4)and (A[i][4] == 'Iris-versicolor')) or ((A[i][3] > 1.5) and (A[i][3] < 2.0) and (A[i][4] == 'Iris-virginica')):
        multicond = multicond +1
-       continue
+    continue
 
+print ("some counts with conditions")
+print ("---------------------------")
 print ("Number of flowers with Petal Width 1cm", PetalWidth1)
 print ("Number of flowers with Petal Width 2cm", PetalWidth2)
 print ("Number of Iris-virginica >1.5 and <2.5 cm", Irisvirginicacount)
