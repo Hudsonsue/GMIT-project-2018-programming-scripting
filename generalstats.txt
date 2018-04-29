@@ -2,10 +2,12 @@
 
 
 Output of Irisdataset analysis: Student G00219132, Susan Hudson
-**************************************************
-Run date and time:  Date: 28-04-18    Time: 13-47
-**************************************************
 
+
+
+**************************************************
+Run date and time:  Date: 29-04-18    Time: 19-54
+**************************************************
 
 
 BASIC STATISTICS ALL SPECIES
@@ -28,10 +30,8 @@ Mean petal width  for all species is 1.1986666666666672 cm
 
 
 
-
 SIMPLE STATISTICS GROUPED BY SPECIES
 ------------------------------------
-
 
 Minimum sepal length per species 4
 Iris-setosa        4.3
@@ -118,17 +118,17 @@ Name: 3, dtype: float64
 
 
 Number of records per species
+-----------------------------
 Iris-versicolor    50
 Iris-virginica     50
 Iris-setosa        50
 Name: 4, dtype: int64
 
 
-
-
 STATISTICS USING DESCRIBE
 -------------------------
 statistics for each feature for all species
+-------------------------------------------
 
        sepal length  sepal width  petal length  petal width
 count    150.000000   150.000000    150.000000   150.000000
@@ -139,7 +139,10 @@ min        4.300000     2.000000      1.000000     0.100000
 50%        5.800000     3.000000      4.350000     1.300000
 75%        6.400000     3.300000      5.100000     1.800000
 max        7.900000     4.400000      6.900000     2.500000
- Summary of data set sepal length
+
+
+Summary of data set sepal length
+---------------------------------
 
                  count   mean       std  min    25%  50%  75%  max
 4                                                                 
@@ -147,7 +150,8 @@ Iris-setosa       50.0  5.006  0.352490  4.3  4.800  5.0  5.2  5.8
 Iris-versicolor   50.0  5.936  0.516171  4.9  5.600  5.9  6.3  7.0
 Iris-virginica    50.0  6.588  0.635880  4.9  6.225  6.5  6.9  7.9
 
- Summary of data set sepal width
+Summary of data set sepal width
+---------------------------------
 
                  count   mean       std  min    25%  50%    75%  max
 4                                                                   
@@ -155,7 +159,8 @@ Iris-setosa       50.0  3.418  0.381024  2.3  3.125  3.4  3.675  4.4
 Iris-versicolor   50.0  2.770  0.313798  2.0  2.525  2.8  3.000  3.4
 Iris-virginica    50.0  2.974  0.322497  2.2  2.800  3.0  3.175  3.8
 
- Summary of data set petal length
+Summary of data set petal length
+---------------------------------
 
                  count   mean       std  min  25%   50%    75%  max
 4                                                                  
@@ -163,7 +168,8 @@ Iris-setosa       50.0  1.464  0.173511  1.0  1.4  1.50  1.575  1.9
 Iris-versicolor   50.0  4.260  0.469911  3.0  4.0  4.35  4.600  5.1
 Iris-virginica    50.0  5.552  0.551895  4.5  5.1  5.55  5.875  6.9
 
- Summary of data set petal width
+Summary of data set petal width
+---------------------------------
 
                  count   mean       std  min  25%  50%  75%  max
 4                                                               
@@ -175,6 +181,8 @@ Iris-virginica    50.0  2.026  0.274650  1.4  1.8  2.0  2.3  2.5
 
 
 
+some counts with conditions
+---------------------------
 Number of flowers with Petal Width 1cm 7
 Number of flowers with Petal Width 2cm 6
 Number of Iris-virginica >1.5 and <2.5 cm 44
