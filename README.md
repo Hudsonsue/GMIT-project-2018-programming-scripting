@@ -41,10 +41,17 @@ Whilst the project brief outlined clearly the project minimum requirements the P
 Irisdataset.py and seabornplots.py contain additional comments and references not contained herein. 
 
 **Run Irisdataset.py**
-When prompted select whether to dislay any text ouput or save to file.
-If you select to save output you will find it in *generalstats.txt*, otherwise it will display on your terminal.
-Output from the section of code that uses pandas describe to summarise the entire dataset will be saved as CSV in *summary.csv*and can be opened with excel to view. 
-Two plots are contained in this file and will be saved as *petal.png* (a scatter plot of petal width and length) and *sepal.png* (a scatter plot of sepal width and length).
+The programme imports various libraries and reads the iris dataset using Pandas (without headers and also with headers added), it creates an array of the dataset and queries outlined below are performed the Iris dataset.
+Upon selecting to run the user is prompted to select whether to dislay any text ouput on the terminal or save to file.
+If you select to save output you will find it in *generalstats.txt*, otherwise it will display on your terminal. the programme runs through the following tasks:
+* using numpy it calculates minimum, maximum and mean of all features, looking at the dataset as a whole. 
+* it calculates the same simple satistics at species level.
+* it outputs sample counts per species
+* it uses pandas describe to summarise the datset (with added headers) and this output is saved as a csv file, summary.csv.This can be viewed with excel.  
+* it then uses describe to produce species level summaries and a for loop is used to minimise repetition of code.
+* it outputs and saves as a png file a scatter (using mathplotlib.pyplot) plot of Sepal length & width.
+* it outputs and saves as a png file a scatter (using mathplotlib.pyplot) plot of Petal length & width
+* it outputs some counts based on conditions, this approach could potentially be used as a basic prediction tool
 
 *Please note* 
 * when running irisdataset.py plots remain open and the programme pauses until closed by users. Despite research I was unable to find a way to allow the program to carry on with open plots. 
@@ -52,7 +59,7 @@ Two plots are contained in this file and will be saved as *petal.png* (a scatter
 
 **Run seabornplots.py**
 
-This programme imports the seaborn library and contains plots based on using seaborn. 
+This programme imports the seaborn library and contains plots based on using seaborn with the Iris dataset. The dataset is also imported from seaborn library.
 You will be asked whether or not you wish to display the Iris Dataset, select Y to display, any other selection will result in no display of dataset.
 
 The following plots are contained and will display when the programme is executed. 
@@ -92,7 +99,8 @@ The approach I took was to get code working for one item (for example the sepal 
 My final step was to spend some time trying to tidy up my code output. 
 
 # Investigation Findings #
-I kept my analysis fairly simple as I wanted to concentrate on my coding skills. When researching 
+I kept my analysis fairly simple as I wanted to concentrate on my coding skills. 
+If time permitted I was going to use the
 
 
 
@@ -125,8 +133,11 @@ http://www.pythonforbeginners.com/basics/python-datetime-time-examples
 ### The following were interesting sources to see how other's analysed the Iris Dataset ###
 
 http://www.pybloggers.com/2015/09/my-first-time-using-matplotlib
-https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342  
+
 https://www.kaggle.com/benhamner/python-data-visualizations
+
+https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342  
+
 
 
 # Personal Goals, challenges and lessons learned #
