@@ -1,10 +1,10 @@
 # Programming and Scripting -iris dataset analysis 
 # G00219132 Susan Hudson 
 # This script opens, reads and prints the Iris dataset csv file 
-# it will form the basis of the statistical analysis
+# it saves or displays output and plots are displayed on screen
 # note - throughout I have used print statements to create empty lines, single, double and multiples
 
-#Import libraries 
+# Import libraries 
 # as I built up the script I imported various libraries as needed 
 import numpy as np
 import pandas as pd
@@ -120,7 +120,7 @@ print('\n')
 # https://stackoverflow.com/questions/32835498/pantdas-python-describe-formatting-output 
 # https://stackoverflow.com/questions/34091877/how-to-add-header-row-to-a-pandas-dataframe 
 # 
-# Iinitially created separate scripts for each feature but then wrote a looped version of the script
+# I initially created separate scripts for each feature but then wrote a looped version of the script
 # I used GMIT Programming & Scripting course videos to assist in looped script
 
  
@@ -137,7 +137,6 @@ features_all = datawithheaders.describe ()
 print (features_all)
 features_all.to_csv('summary.csv')
 print('\n')
-
 
 
 # Below is a loop to print statistcs using describe grouped by species
@@ -197,9 +196,8 @@ plt.savefig ('Petal.png')
 plt.show ()
 
 
-
 # below are some examples of using conditions to output counts
-# these sort of conditions ccould possible be used to make very rough predictions 
+# these sort of conditions could possible be used to make very rough predictions 
 # for example upon entering characteristics statements with multiple conditions could determine what species imputs might belong to
 
 
