@@ -41,10 +41,17 @@ Whilst the project brief outlined clearly the project minimum requirements the P
 Irisdataset.py and seabornplots.py contain additional comments and references not contained herein. 
 
 **Run Irisdataset.py**
-When prompted select whether to dislay any text ouput or save to file.
-If you select to save output you will find it in *generalstats.txt*, otherwise it will display on your terminal.
-Output from the section of code that uses pandas describe to summarise the entire dataset will be saved as CSV in *summary.csv*and can be opened with excel to view. 
-Two plots are contained in this file and will be saved as *petal.png* (a scatter plot of petal width and length) and *sepal.png* (a scatter plot of sepal width and length).
+The programme imports various libraries and reads the iris dataset using Pandas (without headers and also with headers added), it creates an array of the dataset and queries outlined below are performed the Iris dataset.
+Upon selecting to run the user is prompted to select whether to dislay any text ouput on the terminal or save to file.
+If you select to save output you will find it in *generalstats.txt*, otherwise it will display on your terminal. the programme runs through the following tasks:
+* using numpy it calculates minimum, maximum and mean of all features, looking at the dataset as a whole. 
+* it calculates the same simple satistics at species level.
+* it outputs sample counts per species
+* it uses pandas describe to summarise the datset (with added headers) and this output is saved as a csv file, summary.csv.This can be viewed with excel.  
+* it then uses describe to produce species level summaries and a for loop is used to minimise repetition of code.
+* it outputs and saves as a png file a scatter (using mathplotlib.pyplot) plot of Sepal length & width.
+* it outputs and saves as a png file a scatter (using mathplotlib.pyplot) plot of Petal length & width
+* it outputs some counts based on conditions, this approach could potentially be used as a basic prediction tool
 
 *Please note* 
 * when running irisdataset.py plots remain open and the programme pauses until closed by users. Despite research I was unable to find a way to allow the program to carry on with open plots. 
@@ -52,7 +59,7 @@ Two plots are contained in this file and will be saved as *petal.png* (a scatter
 
 **Run seabornplots.py**
 
-This programme imports the seaborn library and contains plots based on using seaborn. 
+This programme imports the seaborn library and contains plots based on using seaborn with the Iris dataset. The dataset is also imported from seaborn library.
 You will be asked whether or not you wish to display the Iris Dataset, select Y to display, any other selection will result in no display of dataset.
 
 The following plots are contained and will display when the programme is executed. 
@@ -77,6 +84,7 @@ Whilst researching the dataset and use thereof I came across a [techopedia defin
 
 One might question why such an innocuous group of measurements is so widely used and during my research I found the following which I felt was a great explanation for a novice to the area of data analytics such as myself, [stack exchange Q/A](https://stats.stackexchange.com/questions/74776/what-aspects-of-the-iris-data-set-make-it-so-successful-as-an-example-teaching)
 
+
 # Investigation Methodology #
 Initial investigation of the dataset revolved around using python skills learnt to produce general stats: Maximum, minimum, mean and counts. This was done at overall level and at species level. 
 My next step was to plot he data and to do this I attempted to plot scatter graphs of the main characteristic pairs (petal width and length and sepal length and width). I was somewhat hampered by my failure to change the colour of the individual species. 
@@ -91,7 +99,19 @@ The approach I took was to get code working for one item (for example the sepal 
 My final step was to spend some time trying to tidy up my code output. 
 
 # Investigation Findings #
-I kept my analysis fairly simple as I wanted to concentrate on my coding skills. When researching 
+I kept my analysis fairly simple as I wanted to concentrate on my coding skills. 
+
+The dataset contains a total of 150 sets of measurements with equal numbers of each of the three species, *Iris setosa*, *Iris virginica* and *Iris versicolor*.
+Sepal Length ranges from 4.3cm to 7.9cm with the *Iris virginica* having the longest Sepals and *Iris setosa* the shortest.
+Sepal Width ranges from 5cm to 5.7cm and it is *Iris setosa*  that has the widest sepals with *Iris versicolor* having the narrowest sepals.
+Petal Length ranges from 3.6cm to 6.9cm and *Iris virginica* has the longest petals and *Iris setosa* the shortest.
+Petal Wodth ranges from 0.1cm to 2.5cm with *Iris virginica* having the widest petals and *Iris setosa* the narrowest.
+
+It can be seen from the scatter plots that *Iris setosa* has characteristics that separate it from the other species both in terms of petal and sepal. It would therefore be relatively easy to identify *Iris setosa* from these two measurements. *Iris visginica* and *Iris versicolor* overlap considerably within the scatter plots and would need to be considered by looking at both petal and sepal.
+
+The final part of my programme was a series of conditions/counts, the logic of these I envisaged might be able to do a prediction of flower species for entered measurements. My aspiration being to load in a new dataset with measurements and predict based on the iris dataset. However to do this would require realistic measurements as otherwise I would be predicting nonsense! 
+So instead I have confined myself to the scenatio where someone chances upon an Iris (in their wedding flowers perhaps!!) and wants to know which species it belongs to!
+looking at the analysis done by Patrick Hoey [9] it should be possible to create some conditions based on sepal length, petal length and petal width that would be a reasonable predictor. 
 
 
 
@@ -115,18 +135,22 @@ pyplot tutorial https://matplotlib.org/users/pyplot_tutorial.html
 
 ### specific tasks /troubleshooting ###
 
-https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.describe.html 
-https://stackoverflow.com/questions/32835498/pandas-python-describe-formatting-output
-https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it-using-matplotlib
-https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matplotlib/
-http://www.pythonforbeginners.com/basics/python-datetime-time-examples
+[1] https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.describe.html 
+[2] https://stackoverflow.com/questions/32835498/pandas-python-describe-formatting-output
+[3] https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it-using-matplotlib
+[4] https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matplotlib/
+[5] http://www.pythonforbeginners.com/basics/python-datetime-time-examples
+[6] http://seaborn.pydata.org/tutorial.html
 
 ### The following were interesting sources to see how other's analysed the Iris Dataset ###
 
-http://www.pybloggers.com/2015/09/my-first-time-using-matplotlib/
-https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342  
-https://www.kaggle.com/benhamner/python-data-visualizations
+[6] http://www.pybloggers.com/2015/09/my-first-time-using-matplotlib
 
+[7] https://www.kaggle.com/benhamner/python-data-visualizations
+
+[8] https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342  
+
+[9] http://patrickhoey.com/downloads/Computer_Science/03_Patrick_Hoey_Data_Visualization_Dataset_paper.pdf
 
 # Personal Goals, challenges and lessons learned #
 ### personal goals ###
