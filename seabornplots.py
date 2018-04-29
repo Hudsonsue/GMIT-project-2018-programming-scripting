@@ -74,8 +74,6 @@ plt.ylabel("Instances", fontsize = 10)
 plt.show() # Show histogram
 
 # Histogram of sepal length
-# Set default Seaborn style
-#sns.set()
 # Plot histogram of sepal lengths
 plt.hist(df["sepal_length"], bins=20 )
 plt.title("Iris Datset: sepal length")
