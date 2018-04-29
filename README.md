@@ -28,7 +28,7 @@ Whilst the project brief outlined clearly the project minimum requirements the P
 * As this is a new course and, in my worklife I have an interest in student retention, I decided to also document within the 'readme' personal goals, challenges and lessons learned. These sections can be found towards the end of this readme.
  
 ## Exercise files within this repository ##
-*	project brief.pdf – Project Instructions document by Dr Ian McLouglin
+*	project brief.pdf – Project Instructions document by Dr Ian McLoughlin
 *	iris.csv - the Iris dataset used in irisdatset.py [data](https://archive.ics.uci.edu/ml/datasets/iris)[14]
 *	check_iriscsv.py – used as a check to ensure Iris dataset opened OK within repository
 *	irisdataset.py – this contains the majority of the python code for this project. Some of the code involves outputs which are saved as:
@@ -37,19 +37,19 @@ Whilst the project brief outlined clearly the project minimum requirements the P
     * summary.csv – output from describe function within irisdataset.py
     * generalstats.txt – output of data from irisdataset.py. 
 *	seabornplots.py – this contains scripts used to create plots using the seaborn library and the Iris dataset from seaborn. 
-* predict.py - this is a simple prediction toolbased on user inputs
+* predict.py - this is a simple prediction tool based on user inputs
 *	iris.jpg – a picture used for the readme file
 
 Irisdataset.py and seabornplots.py contain may additional comments and references not contained herein.
 
 **Run Irisdataset.py**
 The programme imports various libraries and reads the iris dataset using Pandas (without headers and also with headers added), it creates an array of the dataset and queries outlined below are performed the Iris dataset.
-Upon selecting to run the user is prompted to select whether to dislay any text ouput on the terminal or save to file.
+Upon selecting to run the user is prompted to select whether to display any text ouput on the terminal or save to file.
 If you select to save output you will find it in *generalstats.txt*, otherwise it will display on your terminal. the programme runs through the following tasks:
 * using numpy it calculates minimum, maximum and mean of all features, looking at the dataset as a whole. 
-* it calculates the same simple satistics at species level.
+* it calculates the same simple statistics at species level.
 * it outputs sample counts per species
-* it uses pandas describe to summarise the datset (with added headers) and this output is saved as a csv file, summary.csv.This can be viewed with excel.  
+* it uses pandas describe to summarise the dataset (with added headers) and this output is saved as a csv file, summary.csv. This can be viewed with excel.  
 * it then uses describe to produce species level summaries and a for loop is used to minimise repetition of code.
 * it outputs and saves as a png file a scatter (using mathplotlib.pyplot) plot of Sepal length & width.
 * it outputs and saves as a png file a scatter (using mathplotlib.pyplot) plot of Petal length & width
@@ -115,16 +115,16 @@ Sepal Width ranges from 5cm to 5.7cm and it is *Iris setosa*  that has the wides
 Petal Length ranges from 3.6cm to 6.9cm and *Iris virginica* has the longest petals and *Iris setosa* the shortest.
 Petal Width ranges from 0.1cm to 2.5cm with *Iris virginica* having the widest petals and *Iris setosa* the narrowest.
 
-It can be seen from the scatter plots that *Iris setosa* has characteristics that separate it from the other species both in terms of petal and sepal. It would therefore be relatively easy to identify *Iris setosa* from these two measurements. *Iris visginica* and *Iris versicolor* overlap considerably within the scatter plots and would need to be considered by looking at both petal and sepal.
+It can be seen from the scatter plots that *Iris setosa* has characteristics that separate it from the other species both in terms of petal and sepal. It would therefore be relatively easy to identify *Iris setosa* from these two measurements. *Iris virginica* and *Iris versicolor* overlap considerably within the scatter plots and would need to be considered by looking at both petal and sepal.
 
 The final part of my programme was a series of conditions/counts, the logic of these I envisaged might be able to do a prediction of flower species for entered measurements. My aspiration being to load in a new dataset with measurements and predict based on the iris dataset. However to do this would require realistic measurements as otherwise I would be predicting nonsense! 
-So instead I have confined myself to the scenatio where someone chances upon an Iris (in their wedding flowers perhaps!!) and wants to know which species it belongs to!
+So instead I have confined myself to the scenario where someone chances upon an Iris (in their wedding flowers perhaps!!) and wants to know which species it belongs to!
 From looking at the analysis done by Patrick Hoey[13]it should be possible to create some conditions based on sepal length, petal length and petal width that would be a reasonable predictor. I attempted to do this and saved the code in the programme called predict.py. it is a very basic tool which would need further refining. 
 
 Seaborn proved to be a very useful tool for plotting graphs and it easy to save output for use elsewhere - tools were embedded in the plots to do this. 
 
-Whilst researching the dataset and the analysis and data visualization of it I came accross other's work on the iris dataset. 
-Some sources I found particularly usefule were in websites: pybloggers.com[10], kaggle.com[11] and medium.com[12].
+Whilst researching the dataset and the analysis and data visualization of it I came across other's work on the iris dataset. 
+Some sources I found particularly useful were in websites: pybloggers.com[10], kaggle.com[11] and medium.com[12].
 
 # References #
 [1] Fisher, R.A. (1936) The Use of Multiple Measurements in Taxonomic Problems. Annals of Eugenics, 7, 179-188. 
