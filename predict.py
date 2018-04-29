@@ -1,6 +1,8 @@
-# demonstration of basic prediction based on characteristics
+# # Programming and Scripting -iris dataset analysis 
+# G00219132 Susan Hudson 
+# This programme is a demonstration of basic prediction based on characteristics
 # sepal length, petal width and petal length
-# based on analysis undertaken by P Hoey
+# based on analysis undertaken by P Hoey 
 # http://patrickhoey.com/downloads/Computer_Science/03_Patrick_Hoey_Data_Visualization_Dataset_paper.pdf
 
 print ("basic prediction tool")
